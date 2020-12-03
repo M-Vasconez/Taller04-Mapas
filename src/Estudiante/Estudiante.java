@@ -51,6 +51,28 @@ public class Estudiante {
         hash = 59 * hash + this.matricula;
         return hash;
     }
-       
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public float getPromedioFinal() {
+        return promedioFinal;
+    }
+
+    public float[] getListadoNotas() {
+        return listadoNotas;
+    }
+    
+    
+    
     
 }

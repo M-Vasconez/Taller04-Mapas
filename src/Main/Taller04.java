@@ -7,7 +7,7 @@ package Main;
 
 /**
  *
- * @author Mint
+ * @author Matias Vasconez
  */
 public class Taller04 {
 

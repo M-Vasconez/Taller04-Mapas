@@ -7,7 +7,7 @@ package Estudiante;
 
 /**
  *
- * @author Mint
+ * @author Matias Vasconez
  */
 public class PromedioEstudiantes {
     

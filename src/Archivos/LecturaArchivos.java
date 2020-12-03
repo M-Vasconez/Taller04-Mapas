@@ -7,8 +7,8 @@ package Archivos;
 
 /**
  *
- * @author Mint
+ * @author Matias Vasconez
  */
 public class LecturaArchivos {
-    
+   
 }

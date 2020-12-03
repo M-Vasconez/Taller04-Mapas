@@ -40,6 +40,7 @@ public class PromedioEstudiantes {
                 }
 
                 estudiantes.put(est, est.getListadoNotas());
+                System.out.println(est+"  =  "+est.getListadoNotas());
             }
 
             lector.close();
@@ -55,16 +56,16 @@ public class PromedioEstudiantes {
     public static HashMap<Estudiante, Double> calcularPromedios(HashMap<Estudiante, List<Double>> mp) {
         promediosEstudiantes = new HashMap();
         for (Map.Entry<Estudiante, List<Double>> entry : mp.entrySet()) {
-            List<Double> db =entry.getValue();
-            System.out.println(db);
-            double avg=0;
-            for(int i = 0 ; i<db.size();i++){
-                System.out.println(db.get(i));
-                avg+=db.get(i);
+            List<Double> db = entry.getValue();
+            double cont = 0;
+            for (int i = 0; i < db.size(); i++) {
+                cont += db.get(i);
             }
-            promediosEstudiantes.put(entry.getKey(),avg);
+            double avg = cont / db.size();
+
+            promediosEstudiantes.put(entry.getKey(), avg);
+            System.out.println(entry.getKey()+"   =  "+avg);
         }
-        
 
         return promediosEstudiantes;
     }

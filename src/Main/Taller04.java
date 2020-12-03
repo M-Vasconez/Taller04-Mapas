@@ -21,6 +21,7 @@ public class Taller04 {
      */
     public static void main(String[] args) {
         HashMap<Estudiante, List<Double>> est=PromedioEstudiantes.leerArchivos("estudiantes");
+        System.out.println(" ");
         PromedioEstudiantes.calcularPromedios(est);
     }
     

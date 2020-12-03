@@ -5,6 +5,11 @@
  */
 package Main;
 
+import Estudiante.Estudiante;
+import Estudiante.PromedioEstudiantes;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  *
  * @author Matias Vasconez
@@ -15,7 +20,8 @@ public class Taller04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        HashMap<Estudiante, List<Double>> est=PromedioEstudiantes.leerArchivos("estudiantes");
+        PromedioEstudiantes.calcularPromedios(est);
     }
     
 }

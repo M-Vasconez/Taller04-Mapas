@@ -5,6 +5,8 @@
  */
 package Estudiante;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author Matias Vasconez
@@ -14,12 +16,13 @@ public class Estudiante {
     private String apellido;
     private String nombre;
     private float promedioFinal;
-    private float []listadoNotas;
+    private LinkedList<Double> listadoNotas;
 
     public Estudiante(int matricula, String apellido, String nombre) {
         this.matricula = matricula;
         this.apellido = apellido;
         this.nombre = nombre;
+        listadoNotas = new LinkedList();
     }
 
     @Override
@@ -68,11 +71,9 @@ public class Estudiante {
         return promedioFinal;
     }
 
-    public float[] getListadoNotas() {
+    public LinkedList<Double> getListadoNotas() {
         return listadoNotas;
     }
-    
-    
-    
+       
     
 }

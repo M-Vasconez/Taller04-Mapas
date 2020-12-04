@@ -9,6 +9,7 @@ import Estudiante.Estudiante;
 import Estudiante.PromedioEstudiantes;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -20,9 +21,21 @@ public class Taller04 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        HashMap<Estudiante, List<Double>> est=PromedioEstudiantes.leerArchivos("estudiantes");
-        System.out.println(" ");
-        PromedioEstudiantes.calcularPromedios(est);
+        try {
+            HashMap<Estudiante, List<Double>> est = PromedioEstudiantes.leerArchivos("estudiantes");
+            HashMap<Estudiante, Double> PromFinales = PromedioEstudiantes.calcularPromedios(est);
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Bienvenidos al sistema de becas");
+            System.out.println("Ingrese la nota final minima: ");
+            double minimo = sc.nextDouble();
+            System.out.println("Ingrese la nota final maxima: ");
+            double maximo = sc.nextDouble();
+            PromedioEstudiantes.obtenerMejoresPromedios(PromFinales, minimo, maximo);
+            
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
-    
+
 }

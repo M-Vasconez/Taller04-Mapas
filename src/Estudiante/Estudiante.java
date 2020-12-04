@@ -12,6 +12,7 @@ import java.util.LinkedList;
  * @author Matias Vasconez
  */
 public class Estudiante {
+
     private int matricula;
     private String apellido;
     private String nombre;
@@ -27,7 +28,7 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "matricula=" + matricula + ", apellido=" + apellido + ", nombre=" + nombre ;
+        return nombre + " " + apellido + " con matricula: " + matricula;
     }
 
     @Override
@@ -47,7 +48,7 @@ public class Estudiante {
         }
         return true;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -74,6 +75,5 @@ public class Estudiante {
     public LinkedList<Double> getListadoNotas() {
         return listadoNotas;
     }
-       
-    
+
 }
